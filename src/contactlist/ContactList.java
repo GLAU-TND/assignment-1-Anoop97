@@ -61,7 +61,11 @@ public class ContactList<Person> implements ContactADT<Person> {
 
     @Override
     public void view() {
-
+        System.out.println("---Here are all your contacts---");
+        for (int i = 1; i <= size; i++) {
+            Person data = this.getData(i - 1).getData();
+            System.out.println(data);
+        }
     }
 
     @Override
