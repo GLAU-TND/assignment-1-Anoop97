@@ -55,6 +55,14 @@ public class Main {
                         Person person = new Person(firstName, lastName, email, phoneNumber);
                         contactList.add(person);
                         break;
+                    case 2:
+                        if (contactList.size == 0) {
+                            System.out.println("NO RESULT FOUND!");
+                            break;
+                        } else {
+                            contactList.view();
+                            break;
+                        }
                 }
             }
         }
