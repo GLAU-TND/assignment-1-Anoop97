@@ -32,7 +32,11 @@ public class ContactList<Person> implements ContactADT<Person> {
         return response;
     }
 
-
+    private boolean addFirst(Person data) {
+        head = new Node<>(data, null);
+        size++;
+        return true;
+    }
     @Override
     public boolean add(Person data) {
         return false;
