@@ -56,7 +56,7 @@ public class ContactList<Person> implements ContactADT<Person> {
     }
     @Override
     public boolean add(Person data) {
-        return false;
+        return add(data, size);
     }
 
     @Override
