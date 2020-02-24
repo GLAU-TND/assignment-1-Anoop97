@@ -79,6 +79,17 @@ public class Main {
                             }
                         }
                         break;
+                    case 4:
+                        System.out.println("Here are all your contacts: ");
+                        for (int i = 0; i < names.size(); i++) {
+                            System.out.println(i + 1 + ". " + names.get(i));
+                        }
+                        int num = scanner.nextInt();
+                        contactList.delete(num - 1);
+                        System.out.println(contactList.size);
+                        System.out.println(names.get(num - 1) + "'s contact deleted from list!");
+                        names.remove(num - 1);
+                        break;
                 }
             }
         }
