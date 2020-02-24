@@ -43,6 +43,17 @@ public class ContactList<Person> implements ContactADT<Person> {
         size++;
         return true;
     }
+
+    private boolean add(Person data, int index) {
+        if (index > size || index < 0) {
+            throw new IndexOutOfBoundsException(Integer.toString(index));
+        } else if (index == 0) {
+            return addFirst(data);
+        } else {
+            Node<Person> temp = getData(index);
+            return addAfter(data, temp);
+        }
+    }
     @Override
     public boolean add(Person data) {
         return false;
