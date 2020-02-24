@@ -18,6 +18,15 @@ public class Person {
     public Person() {
     }
 
+    public String toString() {
+        return ("-------- * -------- * -------- * --------\n" +
+                "First Name: " + firstName +
+                "\nLast Name: " + lastName +
+                (phoneNumber.size() == 1 ? "\nContact Number: " + phoneNumber : "\nContact Number(s): " + phoneNumber) +
+                "\nEmail address: " + email +
+                "\n-------- * -------- * -------- * -------- ");
+    }
+
     public String getFirstName() {
         return firstName;
     }
