@@ -63,6 +63,22 @@ public class Main {
                             contactList.view();
                             break;
                         }
+                    case 3:
+                        System.out.print("You could search for a contact from their first names: ");
+                        firstName = scanner.next();
+                        int count = 0;
+                        for (int i = 0; i < names.size(); i++) {
+                            if (names.get(i).contains(firstName)) {
+                                count++;
+                            }
+                        }
+                        System.out.println(count + " match Found!");
+                        for (int i = 0; i < names.size(); i++) {
+                            if (names.get(i).contains(firstName)) {
+                                System.out.println(contactList.view(i));
+                            }
+                        }
+                        break;
                 }
             }
         }
