@@ -59,6 +59,18 @@ public class ContactList<Person> implements ContactADT<Person> {
         return add(data, size);
     }
 
+    public Person view(int index) {
+        if (index > size || index < 0) {
+            throw new IndexOutOfBoundsException(Integer.toString(index));
+        } else if (index == 0) {
+            Person data = this.getData(0).getData();
+            return data;
+        } else {
+            Person data = this.getData(index).getData();
+            return data;
+        }
+    }
+
     @Override
     public void view() {
         System.out.println("---Here are all your contacts---");
