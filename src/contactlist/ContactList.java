@@ -119,6 +119,6 @@ public class ContactList<Person> implements ContactADT<Person> {
 
     @Override
     public Person delete() {
-        return null;
+        return delete(size - 1);
     }
 }
