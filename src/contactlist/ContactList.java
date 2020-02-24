@@ -80,6 +80,19 @@ public class ContactList<Person> implements ContactADT<Person> {
         }
     }
 
+    private Person deleteFirst() {
+        Person response = null;
+        Node<Person> temp = head;
+        if (head != null) {
+            head = head.getNext();
+        }
+        if (temp != null) {
+            size--;
+            response = temp.getData();
+        }
+        return response;
+    }
+
     @Override
     public Person delete() {
         return null;
