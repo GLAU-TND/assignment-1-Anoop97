@@ -50,7 +50,7 @@ public class ContactList<Person> implements ContactADT<Person> {
         } else if (index == 0) {
             return addFirst(data);
         } else {
-            Node<Person> temp = getData(index);
+            Node<Person> temp = getData(index - 1);
             return addAfter(data, temp);
         }
     }
