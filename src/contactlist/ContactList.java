@@ -93,6 +93,17 @@ public class ContactList<Person> implements ContactADT<Person> {
         return response;
     }
 
+    private Person deleteAfter(Node<Person> node) {
+        Person response = null;
+        Node<Person> temp = node.getNext();
+        if (temp != null) {
+            node.next = temp.getNext();
+            size--;
+            response = temp.getData();
+        }
+        return response;
+    }
+
     @Override
     public Person delete() {
         return null;
