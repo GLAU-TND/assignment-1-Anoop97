@@ -104,6 +104,19 @@ public class ContactList<Person> implements ContactADT<Person> {
         return response;
     }
 
+    public Person delete(int index) {
+        Person response = null;
+        if (index < 0 || index > size) {
+            throw new IndexOutOfBoundsException(Integer.toString(index));
+        } else if (index == 0) {
+            deleteFirst();
+        } else {
+            Node<Person> temp = getData(index - 1);
+            response = deleteAfter(temp);
+        }
+        return response;
+    }
+
     @Override
     public Person delete() {
         return null;
